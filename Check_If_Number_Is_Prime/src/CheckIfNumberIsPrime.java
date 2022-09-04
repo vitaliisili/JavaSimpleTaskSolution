@@ -1,26 +1,35 @@
 
 /*
- * Task: Check if the positive number is prime if yes return "true" if not return "false"
+ * Task: Check if the positive number is prime if yes return "Prime" if not return "Not Prime"
  * */
+
+import java.math.BigInteger;
 
 public class CheckIfNumberIsPrime {
 
-    public static boolean isPrime(int num) {
+    public static void main(String[] args) {
+        int input = 29;
+        System.out.println(isPrimeFirstSolution(input)); // Prime
+        System.out.println(isPrimeSecondSolution(input)); // Prime
+    }
+
+    public static String isPrimeFirstSolution(int num) {
         if (num < 2) {
-            return true;
+            return "Prime";
         }
         for (int i = 2; i <= num / 2; i++) {
             if (num % i == 0) {
-                return false;
+                return "Not Prime";
             }
         }
-        return true;
+        return "Prime";
     }
 
-    public static void main(String[] args) {
-        int primeNumber = 29;
-        int notPrimeNumber = 9;
-        System.out.println(isPrime(primeNumber)); // true
-        System.out.println(isPrime(notPrimeNumber)); // false
+    /*
+    * Return Prime using BigInteger class
+    * */
+    public static String isPrimeSecondSolution(int num) {
+        BigInteger bigInteger = new BigInteger(String.valueOf(num));
+        return bigInteger.isProbablePrime(1) ? "Prime" : "Not Prime";
     }
 }
