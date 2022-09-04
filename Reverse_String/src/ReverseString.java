@@ -5,6 +5,14 @@
 
 public class ReverseString {
 
+    public static void main(String[] args) {
+        String exampleString = "This is java !";
+        String firstSolution = reverseStringFirstSolution(exampleString); // Result must be "! avaj si sihT"
+        String secondSolution = reverseStringSecondSolution(exampleString); // Result must be "! avaj si sihT"
+        System.out.println("First Solution: " + firstSolution);
+        System.out.println("Second Solution: " + secondSolution);
+    }
+
     // First solution revers char array
     public static String reverseStringFirstSolution(String str) {
         if (str == null) {
@@ -26,11 +34,4 @@ public class ReverseString {
         return new StringBuilder(str).reverse().toString();
     }
 
-    public static void main(String[] args) {
-        String exampleString = "This is java !";
-        String firstSolution = reverseStringFirstSolution(exampleString); // Result must be "! avaj si sihT"
-        String secondSolution = reverseStringSecondSolution(exampleString); // Result must be "! avaj si sihT"
-        System.out.println("First Solution: " + firstSolution);
-        System.out.println("Second Solution: " + secondSolution);
-    }
 }
