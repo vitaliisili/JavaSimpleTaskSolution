@@ -18,6 +18,6 @@ public class AlphaNumericString {
     }
 
     public static boolean isAlphaNumeric(String s) {
-        return s.replaceFirst("[a-zA-Z0-9]+", "check").equals("check");
+        return s.matches("[a-zA-Z0-9]+");
     }
 }
