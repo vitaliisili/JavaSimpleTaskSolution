@@ -23,7 +23,8 @@ public class BinarySearchAlgorithm {
 
        while (start <= end) {
 
-           int mid = (start + end) / 2;
+//           int mid = (start + end) / 2; // Integer overflow can happen to avoid it use code below;
+           int mid = start + (end - start) / 2;
 
            if (target == nums[mid]) {
                return mid;
