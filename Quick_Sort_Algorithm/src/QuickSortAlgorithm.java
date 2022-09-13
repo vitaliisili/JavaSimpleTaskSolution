@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class QuickSortAlgorithm {
 
     public static void main(String[] args) {
-        int[] input = {9, -3, 5, 2, 6, 8, -6, 1, 3};
+        int[] input = {10, 32, 0, -5, 99, 11, 7, -5, -20, 1, 54, 6, 7, 90, 3, 5, 78, 12, 9, 4, 33, -8, -1, 22, 6, -54};
         quickSort(input, 0, input.length - 1);
 
         System.out.println(Arrays.toString(input));
