@@ -27,7 +27,7 @@
 public class ColouredTriangles {
     public static void main(String[] args) {
         String input = "RBRGBRBGGRRRBGBBBGG";
-        System.out.println(triangle(input));
+        System.out.println(triangle(input)); // G
     }
 
     public static char triangle(String row) {
